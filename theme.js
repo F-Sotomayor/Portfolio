@@ -12,6 +12,7 @@ export default extendTheme({
   styles: {
     global: {
       html: {
+        overflowX: "hidden",
         scrollBehavior: "smooth",
         margin: 0,
         padding: 0,
