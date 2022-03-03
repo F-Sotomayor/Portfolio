@@ -63,12 +63,14 @@ export default function Home() {
             <br /> I am a Frontend Developer.
           </Text>
 
-          <Button marginTop={20} width={200} h={12}>
-            Checkout my Work
-          </Button>
+          <Link href="#projects" passHref>
+            <Button marginTop={20} width={200} h={12}>
+              Checkout my Work
+            </Button>
+          </Link>
         </Flex>
       </Stack>
-      <Stack minH="100vh" align="center">
+      <Stack minH="100vh" align="center" paddingTop={12} id="projects">
         <Heading textAlign="center">PROJECTS</Heading>
 
         <Project
@@ -120,35 +122,28 @@ export default function Home() {
         >
           <Heading>CONTACT</Heading>
           <Box fontSize={18}>Would you like to work with me ?</Box>
-          <Button
-            w={200}
-            onClick={() =>
-              router.push("mailto:facundosotomayor95@gmail.com?subject=I w")
-            }
-          >
-            Let&apos;s Talk
-          </Button>
         </Flex>
         <Flex flex={0.5} direction="column">
-          <Flex justify="center">
-            <Link href="#" passHref>
+          <Flex marginTop={6}>
+            <Link
+              href="mailto:facundosotomayor95@gmail.com?subject=Interested in your profile!"
+              passHref
+            >
               <Image
                 w={16}
                 h={16}
-                cursor="pointer"
-                src={`https://icongr.am/material/chevron-up.svg?size=128&color=${
-                  colorMode === "dark" ? "f2f2f2" : "303030"
+                src={`https://icongr.am/material/email.svg?size=128&color=${
+                  colorMode === "dark" ? "f2f2f2" : "63b3ed"
                 }`}
-                alt="arrow up"
-                _hover={{ transform: "scale(1.25)", transition: "1s" }}
+                alt="linkedin"
+                cursor="pointer"
               />
             </Link>
-          </Flex>
-          <Flex marginTop={6}>
             <Link href="https://www.linkedin.com/in/facusotomayor/" passHref>
               <Image
                 w={16}
                 h={16}
+                marginLeft={12}
                 src={`https://icongr.am/material/linkedin.svg?size=128&color=${
                   colorMode === "dark" ? "f2f2f2" : "63b3ed"
                 }`}
@@ -161,14 +156,28 @@ export default function Home() {
               passHref
             >
               <Image
+                marginLeft={12}
                 cursor="pointer"
                 w={16}
                 h={16}
-                marginLeft={12}
                 src={`https://icongr.am/material/github.svg?size=128&color=${
                   colorMode === "dark" ? "f2f2f2" : "63b3ed"
                 }`}
                 alt="github"
+              />
+            </Link>
+          </Flex>
+          <Flex justify="center" align="center" flex={1}>
+            <Link href="#" passHref>
+              <Image
+                w={16}
+                h={16}
+                cursor="pointer"
+                src={`https://icongr.am/material/chevron-up.svg?size=128&color=${
+                  colorMode === "dark" ? "f2f2f2" : "303030"
+                }`}
+                alt="arrow up"
+                _hover={{ transform: "scale(1.25)", transition: "1s" }}
               />
             </Link>
           </Flex>

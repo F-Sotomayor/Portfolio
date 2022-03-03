@@ -13,6 +13,7 @@
     "@emotion/react": "^11",
     "@emotion/styled": "^11",
     "@svgr/webpack": "^6.2.1",
+    "aos": "^2.3.4",
     "embla-carousel-react": "^6.2.0",
     "framer-motion": "^6",
     "next": "12.1.0",
