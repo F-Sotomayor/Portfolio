@@ -131,7 +131,7 @@ export default function Home() {
         </Flex>
         <Flex flex={0.5} direction="column">
           <Flex justify="center">
-            <Link href="#">
+            <Link href="#" passHref>
               <Image
                 w={16}
                 h={16}
