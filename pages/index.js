@@ -146,7 +146,7 @@ export default function Home() {
         </motion.div>
         <motion.div
           viewport={{ once: true }}
-          initial={{ opacity: 0, y: -150 }}
+          initial={{ opacity: 0, y: 50 }}
           whileInView={{ y: 0, opacity: 1 }}
           transition={{ duration: 1, delay: 0.5 }}
         >
