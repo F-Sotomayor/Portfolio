@@ -5,28 +5,24 @@ import {
   Text,
   Button,
   Heading,
-  Grid,
   Box,
-  SimpleGrid,
   Image,
 } from "@chakra-ui/react";
 import DarkMode from "../public/night-mode.svg";
 import LightMode from "../public/light-mode.svg";
 import { useColorMode } from "@chakra-ui/react";
-import Link from "next/link";
 import Project from "../components/Project";
+import Link from "next/link";
+import { useRouter } from "next/router";
 
 export default function Home() {
-  const { toggleColorMode } = useColorMode();
-  const [darkMode, setDarkMode] = React.useState(true);
+  const { colorMode, toggleColorMode } = useColorMode();
 
-  React.useEffect(() => {
-    setDarkMode(darkMode === true ? false : true);
-  }, [toggleColorMode]);
+  const router = useRouter();
 
   return (
     <>
-      <Stack height="100vh" align="center">
+      <Stack height="100vh" align="center" padding={4}>
         <Flex justify="flex-end" width="100%">
           <Flex
             justify="center"
@@ -41,7 +37,7 @@ export default function Home() {
               cursor: "pointer",
             }}
           >
-            {darkMode === false ? (
+            {colorMode === "light" ? (
               <DarkMode
                 style={{ fill: "black", width: "32px", height: "32px" }}
                 onClick={toggleColorMode}
@@ -62,13 +58,13 @@ export default function Home() {
           flex={1}
           fontSize={36}
         >
-          <Text display="flex">
-            Hello, I am <Text marginLeft="8px"> Facundo Sotomayor.</Text>
+          <Text display="flex" textAlign={{ base: "center", md: "none" }}>
+            Hello, I am Facundo Sotomayor.
+            <br /> I am a Frontend Developer.
           </Text>
-          <Text>I am a Frontend Developer.</Text>
 
           <Button marginTop={20} width={200} h={12}>
-            Checkout my Work !
+            Checkout my Work
           </Button>
         </Flex>
       </Stack>
@@ -124,46 +120,72 @@ export default function Home() {
         >
           <Heading>CONTACT</Heading>
           <Box fontSize={18}>Would you like to work with me ?</Box>
-          <Button w={200}>Let's Talk!</Button>
+          <Button
+            w={200}
+            onClick={() =>
+              router.push("mailto:facundosotomayor95@gmail.com?subject=I w")
+            }
+          >
+            Let&apos;s Talk
+          </Button>
         </Flex>
         <Flex flex={0.5} direction="column">
           <Flex justify="center">
-            <Image
-              w={16}
-              h={16}
-              cursor="pointer"
-              src="https://icongr.am/material/chevron-up.svg?size=128&color=a8a8a8"
-              alt="arrow up"
-            />
+            <Link href="#">
+              <Image
+                w={16}
+                h={16}
+                cursor="pointer"
+                src={`https://icongr.am/material/chevron-up.svg?size=128&color=${
+                  colorMode === "dark" ? "f2f2f2" : "303030"
+                }`}
+                alt="arrow up"
+                _hover={{ transform: "scale(1.25)", transition: "1s" }}
+              />
+            </Link>
           </Flex>
           <Flex marginTop={6}>
-            <Image
-              w={16}
-              h={16}
-              src="https://icongr.am/material/linkedin.svg?size=128&color=a8a8a8"
-              alt="linkedin"
-            />
-            <Image
-              w={16}
-              h={16}
-              marginLeft={12}
-              src="https://icongr.am/material/github.svg?size=128&color=a8a8a8"
-              alt="github"
-            />
+            <Link href="https://www.linkedin.com/in/facusotomayor/" passHref>
+              <Image
+                w={16}
+                h={16}
+                src={`https://icongr.am/material/linkedin.svg?size=128&color=${
+                  colorMode === "dark" ? "f2f2f2" : "63b3ed"
+                }`}
+                alt="linkedin"
+                cursor="pointer"
+              />
+            </Link>
+            <Link
+              href="https://github.com/F-Sotomayor?tab=repositories"
+              passHref
+            >
+              <Image
+                cursor="pointer"
+                w={16}
+                h={16}
+                marginLeft={12}
+                src={`https://icongr.am/material/github.svg?size=128&color=${
+                  colorMode === "dark" ? "f2f2f2" : "63b3ed"
+                }`}
+                alt="github"
+              />
+            </Link>
           </Flex>
         </Flex>
         <Flex
-          width="50vw"
+          width={{ base: "80vw", md: "50vw" }}
           borderTop="1px solid gray"
           height="100px"
           justify="center"
           align="center"
           color="gray"
+          textAlign={{ base: "center", md: "none" }}
         >
           <Image
-            w={4}
-            h={4}
-            marginLeft={12}
+            w={{ base: 8, md: 4 }}
+            h={{ base: 8, md: 4 }}
+            marginRight={4}
             src="https://icongr.am/material/copyright.svg?size=128&color=a8a8a8"
             alt="copyright"
           />
