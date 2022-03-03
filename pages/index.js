@@ -89,74 +89,77 @@ export default function Home() {
       </Stack>
       <Stack minH="100vh" align="center" paddingTop={12} id="projects">
         <Heading textAlign="center">PROJECTS</Heading>
-        <motion.div>
-          <motion.div
-            initial={{ opacity: 0, x: -1000 }}
-            whileInView={{ x: 0, opacity: 1 }}
-            transition={{ duration: 1, delay: 0.5 }}
-          >
-            <Project
-              title="Mobilitys.ME"
-              description="First website i've ever designed and developed. I've started coding and 2 months after that i had the chance to work on this and even when this website has not been used since the company died it was a very great challenge."
-              live="https://mobilitys-me.vercel.app/"
-              git="https://github.com/F-Sotomayor/Mobilitys.ME"
-              image="./mobilitys.me.png"
-            />
-          </motion.div>
-          <motion.div
-            initial={{ opacity: 0, x: 1000 }}
-            whileInView={{ x: 0, opacity: 1 }}
-            transition={{ duration: 1, delay: 0.5 }}
-          >
-            <Project
-              title="Pokedex with Chakra UI (MOBILE)"
-              description="Started this project for a challenge on twitter. We've been given a desing and we had to replicate it. Thought it was time to  implement Chakra UI since i was learning how to use it at the moment."
-              live="https://pokedex-with-chakra.vercel.app/"
-              git="https://github.com/F-Sotomayor/Pokedex-with-Chakra"
-              image="./pokedex.png"
-            />
-          </motion.div>
-          <motion.div
-            initial={{ opacity: 0, x: -1000 }}
-            whileInView={{ x: 0, opacity: 1 }}
-            transition={{ duration: 1, delay: 0.5 }}
-          >
-            <Project
-              title="React Drum Kit"
-              description="Challenge from https://javascript30.com/. Decided to save this one because i had a lot of fun while coding it."
-              live="http://drumsjs.surge.sh/"
-              git="https://github.com/F-Sotomayor/React-Drums"
-              image="./react-kit.png"
-            />
-          </motion.div>
-          <motion.div
-            initial={{ opacity: 0, x: 1000 }}
-            whileInView={{ x: 0, opacity: 1 }}
-            transition={{ duration: 1, delay: 0.5 }}
-          >
-            <Project
-              title="Pazzi App"
-              description="Small scale ecommerce app for a bread company. You can basically input how many breads of each product you want and make an order. You can also check your current orders to know the state of them."
-              live="https://pazzi-app.vercel.app/"
-              git="https://github.com/F-Sotomayor/pazzi-app"
-              image="./pazzi.png"
-              note="Check GitHub repository for username and password"
-            />
-          </motion.div>
-          <motion.div
-            initial={{ opacity: 0, y: -150 }}
-            whileInView={{ y: 0, opacity: 1 }}
-            transition={{ duration: 1, delay: 0.5 }}
-          >
-            <Project
-              title="Pazzi Admin"
-              description="Administration Panel for Pazzi. This way the owners can verify their orders and handle the price of their products."
-              live="https://pazzi-admin.vercel.app/"
-              git="https://github.com/F-Sotomayor/pazzi-admin"
-              image="./pazzi-admin.png"
-              note="Check GitHub repository for username and password"
-            />
-          </motion.div>
+        <motion.div
+          initial={{ opacity: 0, x: -1000 }}
+          whileInView={{ x: 0, opacity: 1 }}
+          transition={{ duration: 1, delay: 0.5 }}
+          viewport={{ once: true }}
+        >
+          <Project
+            title="Mobilitys.ME"
+            description="First website i've ever designed and developed. I've started coding and 2 months after that i had the chance to work on this and even when this website has not been used since the company died it was a very great challenge."
+            live="https://mobilitys-me.vercel.app/"
+            git="https://github.com/F-Sotomayor/Mobilitys.ME"
+            image="./mobilitys.me.png"
+          />
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, x: 1000 }}
+          whileInView={{ x: 0, opacity: 1 }}
+          transition={{ duration: 1, delay: 0.5 }}
+          viewport={{ once: true }}
+        >
+          <Project
+            title="Pokedex with Chakra UI (MOBILE)"
+            description="Started this project for a challenge on twitter. We've been given a desing and we had to replicate it. Thought it was time to  implement Chakra UI since i was learning how to use it at the moment."
+            live="https://pokedex-with-chakra.vercel.app/"
+            git="https://github.com/F-Sotomayor/Pokedex-with-Chakra"
+            image="./pokedex.png"
+          />
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, x: -1000 }}
+          whileInView={{ x: 0, opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 1, delay: 0.5 }}
+        >
+          <Project
+            title="React Drum Kit"
+            description="Challenge from https://javascript30.com/. Decided to save this one because i had a lot of fun while coding it."
+            live="http://drumsjs.surge.sh/"
+            git="https://github.com/F-Sotomayor/React-Drums"
+            image="./react-kit.png"
+          />
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, x: 1000 }}
+          whileInView={{ x: 0, opacity: 1 }}
+          transition={{ duration: 1, delay: 0.5 }}
+          viewport={{ once: true }}
+        >
+          <Project
+            title="Pazzi App"
+            description="Small scale ecommerce app for a bread company. You can basically input how many breads of each product you want and make an order. You can also check your current orders to know the state of them."
+            live="https://pazzi-app.vercel.app/"
+            git="https://github.com/F-Sotomayor/pazzi-app"
+            image="./pazzi.png"
+            note="Check GitHub repository for username and password"
+          />
+        </motion.div>
+        <motion.div
+          viewport={{ once: true }}
+          initial={{ opacity: 0, y: -150 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          transition={{ duration: 1, delay: 0.5 }}
+        >
+          <Project
+            title="Pazzi Admin"
+            description="Administration Panel for Pazzi. This way the owners can verify their orders and handle the price of their products."
+            live="https://pazzi-admin.vercel.app/"
+            git="https://github.com/F-Sotomayor/pazzi-admin"
+            image="./pazzi-admin.png"
+            note="Check GitHub repository for username and password"
+          />
         </motion.div>
       </Stack>
       <Stack h="110vh" align="center">
