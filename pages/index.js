@@ -29,33 +29,31 @@ export default function Home() {
     <>
       <Stack height="100vh" align="center" padding={4}>
         <Flex justify="flex-end" width="100%">
-          <motion.div animate={{ x: [1000, 0] }} transition={{ duration: 1.5 }}>
-            <Flex
-              justify="center"
-              align="center"
-              borderRadius="8px"
-              h={10}
-              w={10}
-              _hover={{
-                borderColor: "gray",
-                border: "0.5px solid",
-                transition: "1s",
-                cursor: "pointer",
-              }}
-            >
-              {colorMode === "light" ? (
-                <DarkMode
-                  style={{ fill: "black", width: "32px", height: "32px" }}
-                  onClick={toggleColorMode}
-                />
-              ) : (
-                <LightMode
-                  style={{ fill: "white", width: "32px", height: "32px" }}
-                  onClick={toggleColorMode}
-                />
-              )}
-            </Flex>
-          </motion.div>
+          <Flex
+            justify="center"
+            align="center"
+            borderRadius="8px"
+            h={10}
+            w={10}
+            _hover={{
+              borderColor: "gray",
+              border: "0.5px solid",
+              transition: "1s",
+              cursor: "pointer",
+            }}
+          >
+            {colorMode === "light" ? (
+              <DarkMode
+                style={{ fill: "black", width: "32px", height: "32px" }}
+                onClick={toggleColorMode}
+              />
+            ) : (
+              <LightMode
+                style={{ fill: "white", width: "32px", height: "32px" }}
+                onClick={toggleColorMode}
+              />
+            )}
+          </Flex>
         </Flex>
         <Flex
           width="100%"
@@ -77,8 +75,8 @@ export default function Home() {
 
           <Link href="#projects" passHref>
             <motion.div
-              animate={{ scale: [0, 1] }}
-              transition={{ duration: 2 }}
+              animate={{ scale: [0.75, 1] }}
+              transition={{ duration: 1 }}
             >
               <Button marginTop={20} width={200} h={12}>
                 Checkout my Work
@@ -90,9 +88,9 @@ export default function Home() {
       <Stack minH="100vh" align="center" paddingTop={12} id="projects">
         <Heading textAlign="center">PROJECTS</Heading>
         <motion.div
-          initial={{ opacity: 0, x: -1000 }}
+          initial={{ opacity: 0, x: -50 }}
           whileInView={{ x: 0, opacity: 1 }}
-          transition={{ duration: 1, delay: 0.5 }}
+          transition={{ duration: 0.75, delay: 0.5, ease: "easeOut" }}
           viewport={{ once: true }}
         >
           <Project
@@ -104,9 +102,9 @@ export default function Home() {
           />
         </motion.div>
         <motion.div
-          initial={{ opacity: 0, x: 1000 }}
+          initial={{ opacity: 0, x: 50 }}
           whileInView={{ x: 0, opacity: 1 }}
-          transition={{ duration: 1, delay: 0.5 }}
+          transition={{ duration: 0.75, delay: 0.75, ease: "easeOut" }}
           viewport={{ once: true }}
         >
           <Project
@@ -118,10 +116,10 @@ export default function Home() {
           />
         </motion.div>
         <motion.div
-          initial={{ opacity: 0, x: -1000 }}
+          initial={{ opacity: 0, x: -50 }}
           whileInView={{ x: 0, opacity: 1 }}
           viewport={{ once: true }}
-          transition={{ duration: 1, delay: 0.5 }}
+          transition={{ duration: 0.75, delay: 0.5, ease: "easeOut" }}
         >
           <Project
             title="React Drum Kit"
@@ -132,9 +130,9 @@ export default function Home() {
           />
         </motion.div>
         <motion.div
-          initial={{ opacity: 0, x: 1000 }}
+          initial={{ opacity: 0, x: 50 }}
           whileInView={{ x: 0, opacity: 1 }}
-          transition={{ duration: 1, delay: 0.5 }}
+          transition={{ duration: 0.75, delay: 0.75, ease: "easeOut" }}
           viewport={{ once: true }}
         >
           <Project
@@ -179,42 +177,60 @@ export default function Home() {
               href="mailto:facundosotomayor95@gmail.com?subject=Interested in your profile!"
               passHref
             >
-              <Image
-                w={16}
-                h={16}
-                src={`https://icongr.am/material/email.svg?size=128&color=${
-                  colorMode === "dark" ? "f2f2f2" : "63b3ed"
-                }`}
-                alt="linkedin"
-                cursor="pointer"
-              />
+              <motion.div
+                initial={{ opacity: 0, y: -25 }}
+                whileInView={{ y: 0, opacity: 1 }}
+                transition={{ duration: 0.25, delay: 0.25 }}
+              >
+                <Image
+                  w={16}
+                  h={16}
+                  src={`https://icongr.am/material/email.svg?size=128&color=${
+                    colorMode === "dark" ? "f2f2f2" : "63b3ed"
+                  }`}
+                  alt="linkedin"
+                  cursor="pointer"
+                />
+              </motion.div>
             </Link>
             <Link href="https://www.linkedin.com/in/facusotomayor/" passHref>
-              <Image
-                w={16}
-                h={16}
-                marginLeft={12}
-                src={`https://icongr.am/material/linkedin.svg?size=128&color=${
-                  colorMode === "dark" ? "f2f2f2" : "63b3ed"
-                }`}
-                alt="linkedin"
-                cursor="pointer"
-              />
+              <motion.div
+                initial={{ opacity: 0, y: -25 }}
+                whileInView={{ y: 0, opacity: 1 }}
+                transition={{ duration: 0.25, delay: 0.5 }}
+              >
+                <Image
+                  w={16}
+                  h={16}
+                  marginLeft={12}
+                  src={`https://icongr.am/material/linkedin.svg?size=128&color=${
+                    colorMode === "dark" ? "f2f2f2" : "63b3ed"
+                  }`}
+                  alt="linkedin"
+                  cursor="pointer"
+                />
+              </motion.div>
             </Link>
             <Link
               href="https://github.com/F-Sotomayor?tab=repositories"
               passHref
             >
-              <Image
-                marginLeft={12}
-                cursor="pointer"
-                w={16}
-                h={16}
-                src={`https://icongr.am/material/github.svg?size=128&color=${
-                  colorMode === "dark" ? "f2f2f2" : "63b3ed"
-                }`}
-                alt="github"
-              />
+              <motion.div
+                initial={{ opacity: 0, y: -25 }}
+                whileInView={{ y: 0, opacity: 1 }}
+                transition={{ duration: 0.25, delay: 0.75 }}
+              >
+                <Image
+                  marginLeft={12}
+                  cursor="pointer"
+                  w={16}
+                  h={16}
+                  src={`https://icongr.am/material/github.svg?size=128&color=${
+                    colorMode === "dark" ? "f2f2f2" : "63b3ed"
+                  }`}
+                  alt="github"
+                />
+              </motion.div>
             </Link>
           </Flex>
           <Flex justify="center" align="center" flex={1}>
