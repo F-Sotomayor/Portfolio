@@ -58,7 +58,7 @@ export default function Home() {
           />
           <meta
             property="og:image"
-            content="./mobilitys.me.png"
+            content="https://facundosotomayor.vercel.app/mobilitys.me.png"
             key="ogimage"
           />
           <meta
