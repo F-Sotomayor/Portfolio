@@ -45,11 +45,7 @@ export default function Home() {
             content="Frontend Developer"
             key="ogtitle"
           />
-          <meta
-            name="twitter:card"
-            content="Frontend Developer - Portfolio"
-            key="twcard"
-          />
+          <meta name="twitter:card" content="summary" key="twcard" />
           <meta
             name="twitter:creator"
             content="Facundo Sotomayor"
