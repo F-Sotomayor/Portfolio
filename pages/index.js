@@ -19,6 +19,7 @@ import { useColorMode } from "@chakra-ui/react";
 import Project from "../components/Project";
 import Link from "next/link";
 import { useRouter } from "next/router";
+import Head from "next/head";
 
 export default function Home() {
   const { colorMode, toggleColorMode } = useColorMode();
@@ -28,6 +29,55 @@ export default function Home() {
   return (
     <>
       <Stack height="100vh" align="center" padding={4}>
+        <Head>
+          <title>Facundo Sotomayor</title>
+          <meta name="viewport" content="width=device-width, initial-scale=1" />
+          <meta charSet="utf-8" />
+          <meta name="description" content="Frontend Developer" />
+          <meta itemProp="image" content="./mobilitys.me.png" />
+          <meta
+            property="og:title"
+            content="Facundo Sotomayor - Portfolio"
+            key="ogtitle"
+          />
+          <meta
+            property="og:description"
+            content="Frontend Developer"
+            key="ogtitle"
+          />
+          <meta
+            name="twitter:card"
+            content="Frontend Developer - Portfolio"
+            key="twcard"
+          />
+          <meta
+            name="twitter:creator"
+            content="Facundo Sotomayor"
+            key="twhandle"
+          />
+          <meta
+            property="og:url"
+            content="https://facundosotomayor.vercel.app/"
+            key="ogurl"
+          />
+          <meta
+            property="og:image"
+            content="./mobilitys.me.png"
+            key="ogimage"
+          />
+          <meta
+            property="og:site_name"
+            content="Facundo Sotomayor"
+            key="ogsitename"
+          />
+          <meta property="og:title" content="Facundo Sotomayor" key="ogtitle" />
+          <meta
+            property="og:description"
+            content="Frontend Developer - Portfolio"
+            key="ogdesc"
+          />
+          <link rel="icon" href="./arg.png" />
+        </Head>
         <Flex justify="flex-end" width="100%">
           <Flex
             justify="center"
