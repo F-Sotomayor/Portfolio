@@ -58,7 +58,7 @@ export default function Home() {
           />
           <meta
             property="og:image"
-            content="https://facundosotomayor.vercel.app/mobilitys.me.png"
+            content="https://facundosotomayor.vercel.app/twittercard.jpg"
             key="ogimage"
           />
           <meta
