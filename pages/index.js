@@ -34,7 +34,7 @@ export default function Home() {
           <meta name="viewport" content="width=device-width, initial-scale=1" />
           <meta charSet="utf-8" />
           <meta name="description" content="Frontend Developer" />
-          <meta itemProp="image" content="./mobilitys.me.png" />
+          <meta itemProp="image" content="./twittercard.jpg" />
           <meta
             property="og:title"
             content="Facundo Sotomayor - Portfolio"
