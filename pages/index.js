@@ -34,7 +34,7 @@ export default function Home() {
           <meta name="viewport" content="width=device-width, initial-scale=1" />
           <meta charSet="utf-8" />
           <meta name="description" content="Frontend Developer" />
-          <meta itemProp="image" content="./twittercard.jpg" />
+          <meta itemProp="image" content="https://ibb.co/3p2sWH5" />
           <meta
             property="og:title"
             content="Facundo Sotomayor - Portfolio"
@@ -58,7 +58,7 @@ export default function Home() {
           />
           <meta
             property="og:image"
-            content="https://facundosotomayor.vercel.app/twittercard.jpg"
+            content="https://ibb.co/3p2sWH5"
             key="ogimage"
           />
           <meta
