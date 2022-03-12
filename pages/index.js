@@ -168,11 +168,11 @@ export default function Home() {
           transition={{ duration: 0.75, delay: 0.5, ease: "easeOut" }}
         >
           <Project
-            title="React Drum Kit"
-            description="Challenge from https://javascript30.com/. Decided to save this one because i had a lot of fun while coding it."
-            live="http://drumsjs.surge.sh/"
-            git="https://github.com/F-Sotomayor/React-Drums"
-            image="./react-kit.png"
+            title="Time Tracking Dashboard"
+            description="Challenge from Frontend Mentor. Dashboard mocked with a .json file, mostly design was made for this."
+            live="https://timetracking-dashboard-six.vercel.app//"
+            git="https://github.com/F-Sotomayor/timetracking-dashboard-challenge"
+            image="./dashboard.png"
           />
         </motion.div>
         <motion.div
