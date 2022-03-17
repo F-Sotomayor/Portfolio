@@ -176,6 +176,20 @@ export default function Home() {
           />
         </motion.div>
         <motion.div
+          viewport={{ once: true }}
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          transition={{ duration: 1, delay: 0.5 }}
+        >
+          <Project
+            title="Basement Challenge"
+            description="Basement challenge made with Nextjs + Typescript. Used Tailwind CSS as the design library as the challenge requested."
+            live="https://basement-challenge-psi.vercel.app/"
+            git="https://github.com/F-Sotomayor/basement-challenge"
+            image="./basement.png"
+          />
+        </motion.div>
+        <motion.div
           initial={{ opacity: 0, x: 50 }}
           whileInView={{ x: 0, opacity: 1 }}
           transition={{ duration: 0.75, delay: 0.75, ease: "easeOut" }}
